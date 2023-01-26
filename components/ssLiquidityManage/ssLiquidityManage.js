@@ -11,30 +11,18 @@ import {
   Tooltip,
   IconButton,
   MenuItem,
-  Dialog,
   InputBase,
-  DialogTitle,
-  DialogContent,
   Popover,
   Select,
   ClickAwayListener,
 } from "@mui/material";
 import BigNumber from "bignumber.js";
-import { formatCurrency } from "../../utils";
+import { formatCurrency, formatSymbol, formatInputAmount } from "../../utils";
 import classes from "./ssLiquidityManage.module.css";
 import stores from "../../stores";
 import {ACTIONS, CONTRACTS, DEFAULT_ASSET_FROM, DEFAULT_ASSET_TO} from "../../stores/constants";
-import {
-  Search,
-  DeleteOutline,
-  ArrowBackIosNew,
-  Close,
-  Settings,
-  ArrowDropDownCircleOutlined,
-} from "@mui/icons-material";
+import { ArrowBackIosNew, Close } from "@mui/icons-material";
 import { useAppThemeContext } from "../../ui/AppThemeProvider";
-import { formatSymbol, formatInputAmount } from "../../utils";
-import SwapIconBg from "../../ui/SwapIconBg";
 import AssetSelect from "../../ui/AssetSelect";
 import Borders from "../../ui/Borders";
 import Loader from "../../ui/Loader";

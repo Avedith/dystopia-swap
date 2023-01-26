@@ -16,16 +16,15 @@ import {
   AccordionSummary,
   AccordionDetails,
 } from "@mui/material";
-import { makeStyles, styled, useTheme } from "@mui/styles";
+import { makeStyles, styled } from "@mui/styles";
 import { useRouter } from "next/router";
 import BigNumber from "bignumber.js";
-import { formatCurrency } from "../../utils";
+import { formatCurrency, formatSymbol} from "../../utils";
 import stores from "../../stores";
 import { ACTIONS } from "../../stores/constants";
 import { useAppThemeContext } from "../../ui/AppThemeProvider";
 import { ArrowDropDown, ExpandLess, ExpandMore } from "@mui/icons-material";
 import TablePaginationActions from "../table-pagination/table-pagination";
-import { formatSymbol } from "../../utils";
 
 function descendingComparator(a, b, orderBy) {
   if (!a || !b) {

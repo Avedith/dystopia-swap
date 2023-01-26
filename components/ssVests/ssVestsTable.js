@@ -17,10 +17,7 @@ import {
   Skeleton, Accordion, AccordionSummary, AccordionDetails,
 } from '@mui/material';
 import { useRouter } from "next/router";
-import {
-  ArrowDropDown, ExpandLess, ExpandMore,
-  LockOutlined,
-} from '@mui/icons-material';
+import { ExpandLess, ExpandMore, LockOutlined } from '@mui/icons-material';
 import moment from 'moment';
 import { formatCurrency } from '../../utils';
 import { useAppThemeContext } from '../../ui/AppThemeProvider';

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { makeStyles, styled, useTheme } from "@mui/styles";
 import QuizIcon from "@mui/icons-material/Quiz";
@@ -19,10 +19,6 @@ import {
   IconButton,
   TextField,
   InputAdornment,
-  Popper,
-  Fade,
-  Grid,
-  Switch,
   Skeleton,
   Accordion,
   AccordionSummary,
@@ -36,7 +32,6 @@ import {
   Search,
   Add,
   Close,
-  ArrowDropDown,
   ExpandMore,
   ExpandLess,
 } from "@mui/icons-material";

@@ -17,15 +17,11 @@ import {
 } from '@mui/material';
 import { Add, Search, ArrowBack, DeleteOutline } from '@mui/icons-material';
 import BigNumber from 'bignumber.js';
-import { formatCurrency } from '../../utils';
+import { formatCurrency, formatSymbol } from '../../utils';
 import classes from './ssLiquidityCreate.module.css';
 import stores from '../../stores';
-import {
-  ACTIONS,
-  ETHERSCAN_URL,
-} from '../../stores/constants';
+import { ACTIONS, ETHERSCAN_URL } from '../../stores/constants';
 import { useAppThemeContext } from '../../ui/AppThemeProvider';
-import { formatSymbol } from '../../utils';
 import Borders from '../../ui/Borders';
 
 export default function SSLiquidityCreate() {

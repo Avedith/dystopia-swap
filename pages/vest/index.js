@@ -1,4 +1,4 @@
-import { Typography, Button, Paper, SvgIcon } from "@mui/material";
+import { Typography, Paper } from "@mui/material";
 import VestsNFTs from '../../components/ssVests';
 
 import React, { useState, useEffect } from 'react';

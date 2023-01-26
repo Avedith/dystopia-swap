@@ -4,25 +4,15 @@ import BigNumber from "bignumber.js";
 
 import {
   Typography,
-  Switch,
   Button,
   SvgIcon,
   Badge,
   IconButton,
   Menu,
-  MenuItem,
-  ListItemIcon,
-  ListItemText,
-  TableCell,
-  ClickAwayListener,
+  MenuItem
 } from "@mui/material";
 import { styled, withStyles, withTheme } from "@mui/styles";
-import {
-  ArrowDropDown,
-  AccountBalanceWalletOutlined,
-  DashboardOutlined,
-  NotificationsNoneOutlined,
-} from "@mui/icons-material";
+import { NotificationsNoneOutlined } from "@mui/icons-material";
 
 import Navigation from "../navigation";
 import Unlock from "../unlock";
@@ -40,8 +30,6 @@ import ThemeSwitcher from "../../ui/ThemeSwitcher";
 import { useAppThemeContext } from "../../ui/AppThemeProvider";
 import SSWarning from "../ssWarning";
 import { WalletConnect } from "../WalletConnect/WalletConnect";
-import { ethers } from "ethers";
-import Web3 from "web3";
 import { useEthers } from "@usedapp/core";
 import Hint from "../hint/hint";
 

@@ -3,12 +3,7 @@ import {
   Paper,
   Typography,
   Button,
-  TextField,
-  InputAdornment,
   CircularProgress,
-  RadioGroup,
-  Radio,
-  FormControlLabel,
   Tooltip,
   IconButton, InputBase,
 } from '@mui/material';
@@ -18,11 +13,9 @@ import moment from 'moment';
 import { formatCurrency, formatInputAmount } from '../../utils';
 import classes from "./ssVest.module.css";
 import stores from '../../stores';
-import {
-  ACTIONS,
-} from '../../stores/constants';
+import { ACTIONS } from '../../stores/constants';
 
-import { ArrowBack, ArrowBackIosNew } from '@mui/icons-material';
+import { ArrowBackIosNew } from '@mui/icons-material';
 import VestingInfo from "./vestingInfo";
 import { useAppThemeContext } from '../../ui/AppThemeProvider';
 import SwapIconBg from '../../ui/SwapIconBg';

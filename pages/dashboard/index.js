@@ -1,4 +1,4 @@
-import { Typography, Button, Paper, SvgIcon, Grid, Avatar } from "@mui/material";
+import { Typography, Button, Paper, Grid } from "@mui/material";
 import Overview from '../../components/ffDashboardOverview';
 import VoteOverview from '../../components/ffDashboardVoteOverview';
 import ClaimAll from '../../components/ffDashboardClaimAll';
@@ -10,7 +10,6 @@ import { ACTIONS } from '../../stores/constants';
 import stores from '../../stores';
 import { useRouter } from "next/router";
 import Unlock from '../../components/unlock';
-import { formatAddress } from '../../utils';
 
 const { CONNECT_WALLET, ACCOUNT_CONFIGURED } = ACTIONS
 

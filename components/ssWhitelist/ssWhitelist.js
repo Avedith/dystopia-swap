@@ -1,21 +1,18 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Paper,
   TextField,
   InputAdornment,
   CircularProgress,
   Typography,
-  Tooltip,
-  Button,
-  Popover,
+  Tooltip
 } from "@mui/material";
 import BigNumber from "bignumber.js";
 import TokenSelect from "../select-token/select-token";
 import classes from "./ssWhitelist.module.css";
 import stores from "../../stores";
 import { ACTIONS, ETHERSCAN_URL } from "../../stores/constants";
-import { formatAddress, formatCurrency } from "../../utils";
-import { formatSymbol } from "../../utils";
+import { formatAddress, formatCurrency, formatSymbol } from "../../utils";
 import { useAppThemeContext } from "../../ui/AppThemeProvider";
 import Hint from "../hint/hint";
 

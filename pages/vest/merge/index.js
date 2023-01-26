@@ -3,10 +3,8 @@ import {
   Paper,
   Typography,
   Button,
-  CircularProgress,
   IconButton,
   Tooltip,
-  InputBase,
   Select,
   ClickAwayListener,
   MenuItem,
@@ -19,7 +17,6 @@ import Form from "../../../ui/MigratorForm";
 import Borders from "../../../ui/Borders";
 import stores from "../../../stores";
 import { ACTIONS } from "../../../stores/constants";
-import { formatCurrency } from "../../../utils/utils";
 import moment from "moment";
 
 const merge = () => {

@@ -20,28 +20,17 @@ import {
   DialogTitle,
   DialogContent,
   Dialog,
-  Hidden,
-  Input,
   TextField,
   InputAdornment,
 } from "@mui/material";
-import Tooltip from "@mui/material/Tooltip";
-import QuizIcon from "@mui/icons-material/Quiz";
-import Icon from "@mui/material/Icon";
 import numeral from "numeral";
 import BigNumber from "bignumber.js";
 
-import { formatCurrency } from "../../utils";
-import {
-  ArrowDropDown,
-  Close,
-  ExpandLess,
-  ExpandMore,
-} from "@mui/icons-material";
+import { formatCurrency, formatSymbol } from "../../utils";
+import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import { useAppThemeContext } from "../../ui/AppThemeProvider";
 import TablePaginationActions from "../table-pagination/table-pagination";
 import SortSelect from "../select-sort/select-sort";
-import { formatSymbol } from "../../utils";
 import {TableBodyPlaceholder} from "../table";
 
 const CustomSlider = styled(Slider)(({ theme, appTheme, disabled }) => {

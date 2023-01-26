@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Paper, Grid, Typography, SvgIcon } from '@mui/material';
 import BigNumber from 'bignumber.js';
 
-import { formatCurrency } from '../../utils';
 import classes from './ffDashboardOverview.module.css';
-
 import stores from '../../stores'
+
 import { ACTIONS } from '../../stores/constants';
-import { formatSymbol } from '../../utils'
+import { formatSymbol, formatCurrency } from '../../utils'
 
 function BalanceIcon(props) {
   const { color, className } = props;

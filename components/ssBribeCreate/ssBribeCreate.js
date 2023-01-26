@@ -11,14 +11,12 @@ import {
   Dialog,
   MenuItem,
   IconButton,
-  Select, InputBase, DialogTitle, DialogContent,
+  InputBase, DialogTitle, DialogContent,
 } from '@mui/material';
-import { Add, Search, ArrowBack, DeleteOutline, ArrowBackIosNew, Close } from '@mui/icons-material';
+import { Add, Search, DeleteOutline, ArrowBackIosNew, Close } from '@mui/icons-material';
 import BigNumber from 'bignumber.js';
-import { formatCurrency } from '../../utils';
+import { formatCurrency, formatSymbol, formatInputAmount } from '../../utils';
 import classes from './ssBribeCreate.module.css';
-import { formatSymbol, formatInputAmount } from '../../utils';
-
 import stores from '../../stores';
 import {
   ACTIONS, DEFAULT_ASSET_FROM, DEFAULT_ASSET_TO, ETHERSCAN_URL,

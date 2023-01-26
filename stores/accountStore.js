@@ -1,8 +1,7 @@
-import async from "async";
 import { ACTIONS, CONTRACTS } from "./constants";
 import Multicall from "@dopex-io/web3-multicall";
 import detectProvider from "@metamask/detect-provider";
-import { ethers, Contract, providers } from "ethers";
+import { ethers } from "ethers";
 import stores from "../stores";
 // import {
 //   injected,

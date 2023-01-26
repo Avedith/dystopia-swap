@@ -15,8 +15,7 @@ import {
 import BigNumber from 'bignumber.js';
 import stores from '../../stores';
 import { ACTIONS } from '../../stores/constants';
-import { formatCurrency } from '../../utils';
-import { formatSymbol } from '../../utils';
+import { formatCurrency, formatSymbol } from '../../utils';
 
 function descendingComparator(a, b, orderBy) {
   if (!a || !b) {
