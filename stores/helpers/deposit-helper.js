@@ -6,7 +6,7 @@ import {callContractWait} from "./web3-helper";
 import {v4 as uuidv4} from "uuid";
 import {ACTIONS, CONTRACTS, MAX_UINT256, ZERO_ADDRESS} from "../constants";
 import {parseBN} from '../../utils';
-import {FTM_SYMBOL} from "../constants/contracts";
+import {MATIC_SYMBOL} from "../constants/contracts";
 
 const getTXUUID = () => {
   return uuidv4();
@@ -31,11 +31,11 @@ export const createPairDeposit = async (
 
     let toki0 = token0.address;
     let toki1 = token1.address;
-    if (token0.address === FTM_SYMBOL) {
-      toki0 = CONTRACTS.WFTM_ADDRESS;
+    if (token0.address === MATIC_SYMBOL) {
+      toki0 = CONTRACTS.WMATIC_ADDRESS;
     }
-    if (token1.address === FTM_SYMBOL) {
-      toki1 = CONTRACTS.WFTM_ADDRESS;
+    if (token1.address === MATIC_SYMBOL) {
+      toki1 = CONTRACTS.WMATIC_ADDRESS;
     }
 
     const pairFor = await getPairAddressByTokens(web3, toki0, toki1, isStable);
@@ -114,7 +114,7 @@ export const createPairDeposit = async (
     let allowance1;
 
     // CHECK ALLOWANCES AND SET TX DISPLAY
-    if (token0.address !== FTM_SYMBOL) {
+    if (token0.address !== MATIC_SYMBOL) {
       allowance0 = await getTokenAllowance(web3, token0, account, CONTRACTS.ROUTER_ADDRESS);
       if (BigNumber(allowance0).lt(amount0)) {
         emitter.emit(ACTIONS.TX_STATUS, {
@@ -137,7 +137,7 @@ export const createPairDeposit = async (
       });
     }
 
-    if (token1.address !== FTM_SYMBOL) {
+    if (token1.address !== MATIC_SYMBOL) {
       allowance1 = await getTokenAllowance(web3, token1, account, CONTRACTS.ROUTER_ADDRESS);
       if (BigNumber(allowance1).lt(amount1)) {
         emitter.emit(ACTIONS.TX_STATUS, {
@@ -257,7 +257,7 @@ export const createPairDeposit = async (
     ];
     let sendValue = null;
 
-    if (token0.address === FTM_SYMBOL) {
+    if (token0.address === MATIC_SYMBOL) {
       func = "addLiquidityMATIC";
       params = [
         token1.address,
@@ -270,7 +270,7 @@ export const createPairDeposit = async (
       ];
       sendValue = sendAmount0;
     }
-    if (token1.address === FTM_SYMBOL) {
+    if (token1.address === MATIC_SYMBOL) {
       func = "addLiquidityMATIC";
       params = [
         token0.address,
@@ -307,11 +307,11 @@ export const createPairDeposit = async (
           // GET PAIR FOR NEWLY CREATED LIQUIDITY POOL
           let tok0 = token0.address;
           let tok1 = token1.address;
-          if (token0.address === FTM_SYMBOL) {
-            tok0 = CONTRACTS.WFTM_ADDRESS;
+          if (token0.address === MATIC_SYMBOL) {
+            tok0 = CONTRACTS.WMATIC_ADDRESS;
           }
-          if (token1.address === FTM_SYMBOL) {
-            tok1 = CONTRACTS.WFTM_ADDRESS;
+          if (token1.address === MATIC_SYMBOL) {
+            tok1 = CONTRACTS.WMATIC_ADDRESS;
           }
           const pairFor = await getPairAddressByTokens(web3, tok0, tok1, isStable);
 

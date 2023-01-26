@@ -6,7 +6,7 @@ import {v4 as uuidv4} from "uuid";
 import {ACTIONS, CONTRACTS, MAX_UINT256} from "../constants";
 import {formatCurrency, parseBN} from '../../utils';
 import {emitNewNotifications, emitStatus, emitNotificationDone} from "./emit-helper";
-import {FTM_SYMBOL} from "../constants/contracts";
+import {MATIC_SYMBOL} from "../constants/contracts";
 
 const getTXUUID = () => {
   return uuidv4();
@@ -126,7 +126,7 @@ export const swap = async (
       func = "swapExactTokensForTokensSupportingFeeOnTransferTokens";
     }
 
-    if (fromAsset.address === FTM_SYMBOL) {
+    if (fromAsset.address === MATIC_SYMBOL) {
       func = "swapExactMATICForTokens";
       params = [
         sendMinAmountOut,
@@ -136,7 +136,7 @@ export const swap = async (
       ];
       sendValue = sendFromAmount;
     }
-    if (toAsset.address === FTM_SYMBOL) {
+    if (toAsset.address === MATIC_SYMBOL) {
       func = "swapExactTokensForMATIC";
       if (
         fromAsset.address.toLowerCase() ===
@@ -195,8 +195,8 @@ export const wrap = async (
     const sendValue = parseBN(fromAmount, fromAsset.decimals);
 
     const wmaticContract = new web3.eth.Contract(
-      CONTRACTS.WFTM_ABI,
-      CONTRACTS.WFTM_ADDRESS
+      CONTRACTS.WMATIC_ABI,
+      CONTRACTS.WMATIC_ADDRESS
     );
 
     emitter.emit(ACTIONS.TX_ADDED, {
@@ -269,8 +269,8 @@ export const unwrap = async (
 
     const sendFromAmount = parseBN(fromAmount, fromAsset.decimals);
     const wmaticContract = new web3.eth.Contract(
-      CONTRACTS.WFTM_ABI,
-      CONTRACTS.WFTM_ADDRESS
+      CONTRACTS.WMATIC_ABI,
+      CONTRACTS.WMATIC_ADDRESS
     );
     emitter.emit(ACTIONS.TX_ADDED, {
       title: `Unwrap ${fromAsset.symbol} for ${toAsset.symbol}`,

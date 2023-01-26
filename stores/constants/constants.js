@@ -21,7 +21,7 @@ export const CONTRACTS = cont
 export const ACTIONS = actions
 export const QUERIES = queries
 
-export const NETWORK_TOKEN_NAME = CONTRACTS.FTM_NAME;
+export const NETWORK_TOKEN_NAME = CONTRACTS.MATIC_NAME;
 
 export const MAX_UINT256 = new BigNumber(2).pow(256).minus(1).toFixed(0)
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
@@ -203,11 +203,11 @@ export const BASE_ASSETS_WHITELIST = [
 
 export const ROUTE_ASSETS = [
   {
-    address: CONTRACTS.WFTM_ADDRESS,
-    decimals: CONTRACTS.WFTM_DECIMALS,
-    logoURI: CONTRACTS.WFTM_LOGO,
-    name: CONTRACTS.WFTM_NAME,
-    symbol: CONTRACTS.WFTM_SYMBOL,
+    address: CONTRACTS.WMATIC_ADDRESS,
+    decimals: CONTRACTS.WMATIC_DECIMALS,
+    logoURI: CONTRACTS.WMATIC_LOGO,
+    name: CONTRACTS.WMATIC_NAME,
+    symbol: CONTRACTS.WMATIC_SYMBOL,
   }, {
     address: "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
     decimals: 6,

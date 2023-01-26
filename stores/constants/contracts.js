@@ -14,12 +14,12 @@ export const VE_TOKEN_DECIMALS = 18
 export const VE_TOKEN_LOGO = 'https://dystopia-swap-seven.vercel.app/logo.svg'
 export const VE_TOKEN_ABI = abis.veTokenABI
 
-export const WFTM_ADDRESS = '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270'
-export const WFTM_NAME = 'Wrapped MATIC'
-export const WFTM_SYMBOL = 'WMATIC'
-export const WFTM_DECIMALS = 18
-export const WFTM_LOGO = 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png'
-export const WFTM_ABI = abis.wftmABI
+export const WMATIC_ADDRESS = '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270'
+export const WMATIC_NAME = 'Wrapped MATIC'
+export const WMATIC_SYMBOL = 'WMATIC'
+export const WMATIC_DECIMALS = 18
+export const WMATIC_LOGO = 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png'
+export const WMATIC_ABI = abis.wmaticABI
 
 // alternative route asset
 export const USDP_ADDRESS = '0x236eeC6359fb44CCe8f97E99387aa7F8cd5cdE1f'
@@ -29,11 +29,11 @@ export const USDP_DECIMALS = 6
 export const USDP_LOGO = 'https://2173993027-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F9HhCCgYexXiRot0OWAJY%2Fuploads%2FQ41zhb0z0oV5WI1zpKEg%2FUSD%2B%20logo.png?alt=media&token=533d9ed9-6904-4f45-82a3-2c9e1060a3b5'
 export const USDP_ABI = abis.erc20ABI
 
-export const FTM_ADDRESS = 'MATIC'
-export const FTM_NAME = 'MATIC'
-export const FTM_SYMBOL = 'MATIC' 
-export const FTM_DECIMALS = 18
-export const FTM_LOGO = 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png'
+export const MATIC_ADDRESS = 'MATIC'
+export const MATIC_NAME = 'MATIC'
+export const MATIC_SYMBOL = 'MATIC' 
+export const MATIC_DECIMALS = 18
+export const MATIC_LOGO = 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png'
 
 export const FACTORY_ADDRESS = '0x1d21Db6cde1b18c7E47B0F7F42f4b3F68b9beeC9'
 export const FACTORY_ABI = abis.factoryABI

@@ -4,14 +4,14 @@ import * as ethers from 'ethers'
 import { debounce } from "debounce"
 import stores from "./";
 import {
-    FTM_SYMBOL,
-    WFTM_ADDRESS,
-    WFTM_DECIMALS,
-    WFTM_SYMBOL,
+    MATIC_SYMBOL,
+    WMATIC_ADDRESS,
+    WMATIC_DECIMALS,
+    WMATIC_SYMBOL,
     ROUTER_ADDRESS,
     multiSwapAddress,
     ERC20_ABI,
-    FTM_DECIMALS
+    MATIC_DECIMALS
 } from "./constants/contracts";
 import {DIRECT_SWAP_ROUTES, GAS_MULTIPLIER, MAX_UINT256, MULTISWAP_INCLUDE, ZERO_ADDRESS} from "./constants";
 import { v4 as uuidv4 } from 'uuid';
@@ -166,10 +166,10 @@ class MultiSwapStore {
         }
 
         if (this.swap && this.swap.swapData) {
-            if (this.tokenIn === FTM_SYMBOL) {
+            if (this.tokenIn === MATIC_SYMBOL) {
                 this.swap.swapData.tokenIn = ZERO_ADDRESS
             }
-            if (this.tokenOut === FTM_SYMBOL) {
+            if (this.tokenOut === MATIC_SYMBOL) {
                 this.swap.swapData.tokenOut = ZERO_ADDRESS
             }
         }
@@ -287,18 +287,18 @@ class MultiSwapStore {
     }
 
     async _getToken(address, giveWrappedForNative = true) {
-        if (address === FTM_SYMBOL) {
+        if (address === MATIC_SYMBOL) {
             if (giveWrappedForNative) {
                 return {
-                    address: WFTM_ADDRESS,
-                    symbol: WFTM_SYMBOL,
-                    decimals: WFTM_DECIMALS,
+                    address: WMATIC_ADDRESS,
+                    symbol: WMATIC_SYMBOL,
+                    decimals: WMATIC_DECIMALS,
                 }
             }
             return {
-                address: FTM_SYMBOL,
-                symbol: FTM_SYMBOL,
-                decimals: FTM_DECIMALS,
+                address: MATIC_SYMBOL,
+                symbol: MATIC_SYMBOL,
+                decimals: MATIC_DECIMALS,
             }
         }
 
@@ -325,8 +325,8 @@ class MultiSwapStore {
     }
 
     get isWrapUnwrap() {
-        return (this.tokenIn === FTM_SYMBOL && ''.concat(this.tokenOut).toLowerCase() === WFTM_ADDRESS.toLowerCase())
-            || (''.concat(this.tokenIn).toLowerCase() === WFTM_ADDRESS.toLowerCase() && this.tokenOut === FTM_SYMBOL)
+        return (this.tokenIn === MATIC_SYMBOL && ''.concat(this.tokenOut).toLowerCase() === WMATIC_ADDRESS.toLowerCase())
+            || (''.concat(this.tokenIn).toLowerCase() === WMATIC_ADDRESS.toLowerCase() && this.tokenOut === MATIC_SYMBOL)
     }
 
     get isDirectRoute() {
@@ -350,7 +350,7 @@ class MultiSwapStore {
                 return
             }
 
-            if (this.tokenIn === FTM_SYMBOL) {
+            if (this.tokenIn === MATIC_SYMBOL) {
                 this.allowed = true
             }
 
@@ -426,7 +426,7 @@ class MultiSwapStore {
             return true
         }
 
-        if (this.tokenIn === FTM_SYMBOL) {
+        if (this.tokenIn === MATIC_SYMBOL) {
             this.allowed = true;
             return true
         }

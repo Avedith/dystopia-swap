@@ -25,11 +25,11 @@ export const quoteAddLiquidity = async (
     let addy0 = token0.address;
     let addy1 = token1.address;
 
-    if (token0.address === CONTRACTS.FTM_SYMBOL) {
-      addy0 = CONTRACTS.WFTM_ADDRESS;
+    if (token0.address === CONTRACTS.MATIC_SYMBOL) {
+      addy0 = CONTRACTS.WMATIC_ADDRESS;
     }
-    if (token1.address === CONTRACTS.FTM_SYMBOL) {
-      addy1 = CONTRACTS.WFTM_ADDRESS;
+    if (token1.address === CONTRACTS.MATIC_SYMBOL) {
+      addy1 = CONTRACTS.WMATIC_ADDRESS;
     }
 
     const res = await routerContract.methods
@@ -139,11 +139,11 @@ export const quoteSwap = async (
     let addy0 = fromAsset.address;
     let addy1 = toAsset.address;
 
-    if (fromAsset.address === CONTRACTS.FTM_SYMBOL) {
-      addy0 = CONTRACTS.WFTM_ADDRESS;
+    if (fromAsset.address === CONTRACTS.MATIC_SYMBOL) {
+      addy0 = CONTRACTS.WMATIC_ADDRESS;
     }
-    if (toAsset.address === CONTRACTS.FTM_SYMBOL) {
-      addy1 = CONTRACTS.WFTM_ADDRESS;
+    if (toAsset.address === CONTRACTS.MATIC_SYMBOL) {
+      addy1 = CONTRACTS.WMATIC_ADDRESS;
     }
 
     let amountOuts = buildRoutes(routeAssets, addy0, addy1, directSwapRoute)

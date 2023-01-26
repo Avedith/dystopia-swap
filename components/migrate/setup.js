@@ -94,10 +94,10 @@ export default function Setup() {
     const multicall = await stores.accountStore.getMulticall();
 
     if (token0 == "MATIC") {
-      token0 = CONTRACTS.WFTM_ADDRESS;
+      token0 = CONTRACTS.WMATIC_ADDRESS;
     }
     if (token1 == "MATIC") {
-      token1 = CONTRACTS.WFTM_ADDRESS;
+      token1 = CONTRACTS.WMATIC_ADDRESS;
     }
 
     try {
@@ -431,10 +431,10 @@ export default function Setup() {
     let addy1 = token1.address;
 
     if (token0.address === "MATIC") {
-      addy0 = CONTRACTS.WFTM_ADDRESS;
+      addy0 = CONTRACTS.WMATIC_ADDRESS;
     }
     if (token1.address === "MATIC") {
-      addy1 = CONTRACTS.WFTM_ADDRESS;
+      addy1 = CONTRACTS.WMATIC_ADDRESS;
     }
 
     let res = await routerContract.methods

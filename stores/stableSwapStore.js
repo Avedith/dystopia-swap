@@ -499,7 +499,7 @@ class Store {
       if (!asset) {
         return;
       }
-      if (asset.address === CONTRACTS.FTM_SYMBOL) {
+      if (asset.address === CONTRACTS.MATIC_SYMBOL) {
         asset.balance = formatBN(await web3.eth.getBalance(account))
       } else {
         asset.balance = await getTokenBalance(assetAddress, web3, account, asset.decimals)
@@ -991,10 +991,10 @@ class Store {
       const allowanceCallsPromises = [];
 
       if (token0.address === "MATIC") {
-        token0.address = CONTRACTS.WFTM_ADDRESS;
+        token0.address = CONTRACTS.WMATIC_ADDRESS;
       }
       if (token1.address === "MATIC") {
-        token1.address = CONTRACTS.WFTM_ADDRESS;
+        token1.address = CONTRACTS.WMATIC_ADDRESS;
       }
 
       // ADD TRNASCTIONS TO TRANSACTION QUEUE DISPLAY

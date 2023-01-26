@@ -11,7 +11,7 @@ import { formatCurrency, formatInputAmount } from "../../utils";
 import classes from "./ssSwap.module.css";
 import stores from "../../stores";
 import { ACTIONS, DEFAULT_ASSET_FROM, DEFAULT_ASSET_TO, DIRECT_SWAP_ROUTES } from "../../stores/constants";
-import { FTM_SYMBOL, WFTM_SYMBOL } from "../../stores/constants/contracts";
+import { MATIC_SYMBOL, WMATIC_SYMBOL } from "../../stores/constants/contracts";
 import BigNumber from "bignumber.js";
 import { useAppThemeContext } from "../../ui/AppThemeProvider";
 import BtnSwap from "../../ui/BtnSwap";
@@ -271,10 +271,10 @@ function Setup() {
                 setToAmountValue("");
                 if (
                     !(
-                        (fromAssetValue?.symbol === FTM_SYMBOL ||
-                            fromAssetValue?.symbol === WFTM_SYMBOL) &&
-                        (toAssetValue?.symbol === WFTM_SYMBOL ||
-                            toAssetValue?.symbol === FTM_SYMBOL)
+                        (fromAssetValue?.symbol === MATIC_SYMBOL ||
+                            fromAssetValue?.symbol === WMATIC_SYMBOL) &&
+                        (toAssetValue?.symbol === WMATIC_SYMBOL ||
+                            toAssetValue?.symbol === MATIC_SYMBOL)
                     )
                 ) {
                     sethidequote(false);
@@ -332,10 +332,10 @@ function Setup() {
                 setFromAssetValue(toAssetValue);
                 if (
                     !(
-                        (fromAssetValue?.symbol === FTM_SYMBOL ||
-                            fromAssetValue?.symbol === WFTM_SYMBOL) &&
-                        (toAssetValue?.symbol === WFTM_SYMBOL ||
-                            toAssetValue?.symbol === FTM_SYMBOL)
+                        (fromAssetValue?.symbol === MATIC_SYMBOL ||
+                            fromAssetValue?.symbol === WMATIC_SYMBOL) &&
+                        (toAssetValue?.symbol === WMATIC_SYMBOL ||
+                            toAssetValue?.symbol === MATIC_SYMBOL)
                     )
                 ) {
                     sethidequote(false);
@@ -366,9 +366,9 @@ function Setup() {
                 setFromAssetValue(value);
                 if (
                     !(
-                        (value?.symbol === FTM_SYMBOL || value?.symbol === WFTM_SYMBOL) &&
-                        (toAssetValue?.symbol === WFTM_SYMBOL ||
-                            toAssetValue?.symbol === FTM_SYMBOL)
+                        (value?.symbol === MATIC_SYMBOL || value?.symbol === WMATIC_SYMBOL) &&
+                        (toAssetValue?.symbol === WMATIC_SYMBOL ||
+                            toAssetValue?.symbol === MATIC_SYMBOL)
                     )
                 ) {
                     sethidequote(false);
@@ -389,10 +389,10 @@ function Setup() {
                 setToAssetValue(fromAssetValue);
                 if (
                     !(
-                        (fromAssetValue?.symbol === FTM_SYMBOL ||
-                            fromAssetValue?.symbol === WFTM_SYMBOL) &&
-                        (toAssetValue?.symbol === WFTM_SYMBOL ||
-                            toAssetValue?.symbol === FTM_SYMBOL)
+                        (fromAssetValue?.symbol === MATIC_SYMBOL ||
+                            fromAssetValue?.symbol === WMATIC_SYMBOL) &&
+                        (toAssetValue?.symbol === WMATIC_SYMBOL ||
+                            toAssetValue?.symbol === MATIC_SYMBOL)
                     )
                 ) {
                     sethidequote(false);
@@ -423,9 +423,9 @@ function Setup() {
                 setToAssetValue(value);
                 if (
                     !(
-                        (fromAssetValue?.symbol === FTM_SYMBOL || fromAssetValue?.symbol === WFTM_SYMBOL)
+                        (fromAssetValue?.symbol === MATIC_SYMBOL || fromAssetValue?.symbol === WMATIC_SYMBOL)
                         &&
-                        (value?.symbol === WFTM_SYMBOL || value?.symbol === FTM_SYMBOL)
+                        (value?.symbol === WMATIC_SYMBOL || value?.symbol === MATIC_SYMBOL)
                     )
                 ) {
                     sethidequote(false);
@@ -454,9 +454,9 @@ function Setup() {
         } else {
             if (
                 !(
-                    (fromAssetValue?.symbol === FTM_SYMBOL || fromAssetValue?.symbol === WFTM_SYMBOL)
+                    (fromAssetValue?.symbol === MATIC_SYMBOL || fromAssetValue?.symbol === WMATIC_SYMBOL)
                     &&
-                    (toAssetValue?.symbol === WFTM_SYMBOL || toAssetValue?.symbol === FTM_SYMBOL)
+                    (toAssetValue?.symbol === WMATIC_SYMBOL || toAssetValue?.symbol === MATIC_SYMBOL)
                 )
             ) {
                 sethidequote(false);
@@ -501,9 +501,9 @@ function Setup() {
 
         if (
             !(
-                (fromAssetValue?.symbol === FTM_SYMBOL ||
-                    fromAssetValue?.symbol === WFTM_SYMBOL) &&
-                (toAssetValue?.symbol === WFTM_SYMBOL || toAssetValue?.symbol === FTM_SYMBOL)
+                (fromAssetValue?.symbol === MATIC_SYMBOL ||
+                    fromAssetValue?.symbol === WMATIC_SYMBOL) &&
+                (toAssetValue?.symbol === WMATIC_SYMBOL || toAssetValue?.symbol === MATIC_SYMBOL)
             )
         ) {
             sethidequote(false);
@@ -529,9 +529,9 @@ function Setup() {
 
         if (
             !(
-                (fromAssetValue?.symbol === FTM_SYMBOL ||
-                    fromAssetValue?.symbol === WFTM_SYMBOL) &&
-                (toAssetValue?.symbol === WFTM_SYMBOL || toAssetValue?.symbol === FTM_SYMBOL)
+                (fromAssetValue?.symbol === MATIC_SYMBOL ||
+                    fromAssetValue?.symbol === WMATIC_SYMBOL) &&
+                (toAssetValue?.symbol === WMATIC_SYMBOL || toAssetValue?.symbol === MATIC_SYMBOL)
             )
         ) {
             sethidequote(false);
@@ -1274,12 +1274,12 @@ function Setup() {
                     }
                 }
 
-                if ((fromAssetValue?.symbol === FTM_SYMBOL && toAssetValue?.symbol === WFTM_SYMBOL)) {
+                if ((fromAssetValue?.symbol === MATIC_SYMBOL && toAssetValue?.symbol === WMATIC_SYMBOL)) {
                     buttonLabel = 'Wrap'
                     handleClickButton = onWrap
                 }
 
-                if (fromAssetValue?.symbol === WFTM_SYMBOL && toAssetValue?.symbol === FTM_SYMBOL) {
+                if (fromAssetValue?.symbol === WMATIC_SYMBOL && toAssetValue?.symbol === MATIC_SYMBOL) {
                     buttonLabel = 'Unwrap'
                     handleClickButton = onUnwrap
                 }

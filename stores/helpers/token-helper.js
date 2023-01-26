@@ -124,15 +124,15 @@ export const getBaseAssets = async () => {
     }
 
     // todo a bit mess with cases, need to keep only 1 constant for each value
-    const nativeFTM = {
-      id: CONTRACTS.FTM_ADDRESS,
-      address: CONTRACTS.FTM_ADDRESS,
-      decimals: CONTRACTS.FTM_DECIMALS,
-      logoURI: CONTRACTS.FTM_LOGO,
-      name: CONTRACTS.FTM_NAME,
-      symbol: CONTRACTS.FTM_SYMBOL,
+    const nativeMATIC = {
+      id: CONTRACTS.MATIC_ADDRESS,
+      address: CONTRACTS.MATIC_ADDRESS,
+      decimals: CONTRACTS.MATIC_DECIMALS,
+      logoURI: CONTRACTS.MATIC_LOGO,
+      name: CONTRACTS.MATIC_NAME,
+      symbol: CONTRACTS.MATIC_SYMBOL,
     };
-    baseAssets.unshift(nativeFTM);
+    baseAssets.unshift(nativeMATIC);
 
     let localBaseAssets = getLocalAssets();
 
@@ -173,7 +173,7 @@ export const getBalancesForBaseAssets = async (web3, account, baseAssets, multic
     let tokens = [];
     for (let i = 0; i < baseAssets.length; i++) {
       const asset = baseAssets[i];
-      if (asset.address === CONTRACTS.FTM_SYMBOL) {
+      if (asset.address === CONTRACTS.MATIC_SYMBOL) {
         asset.balance = formatBN(await web3.eth.getBalance(account));
         continue;
       }

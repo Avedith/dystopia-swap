@@ -338,10 +338,10 @@ export default function ssLiquidityManage() {
       let addy1 = assetB.address;
 
       if (assetA.address === "MATIC") {
-        addy0 = CONTRACTS.WFTM_ADDRESS;
+        addy0 = CONTRACTS.WMATIC_ADDRESS;
       }
       if (assetB.address === "MATIC") {
-        addy1 = CONTRACTS.WFTM_ADDRESS;
+        addy1 = CONTRACTS.WMATIC_ADDRESS;
       }
 
       if (

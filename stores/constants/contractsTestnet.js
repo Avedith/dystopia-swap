@@ -14,18 +14,18 @@ export const VE_TOKEN_DECIMALS = 18
 export const VE_TOKEN_LOGO = 'https://dystopia-swap-seven.vercel.app/logo.svg'
 export const VE_TOKEN_ABI = abis.veTokenABI
 
-export const WFTM_ADDRESS = '0xe02f20BB33F8Bfb48eB907523435CA886e139A08'
-export const WFTM_NAME = 'Wrapped MATIC'
-export const WFTM_SYMBOL = 'WMATIC'
-export const WFTM_DECIMALS = 18
-export const WFTM_LOGO = 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png'
-export const WFTM_ABI = abis.wftmABI
+export const WMATIC_ADDRESS = '0xe02f20BB33F8Bfb48eB907523435CA886e139A08'
+export const WMATIC_NAME = 'Wrapped MATIC'
+export const WMATIC_SYMBOL = 'WMATIC'
+export const WMATIC_DECIMALS = 18
+export const WMATIC_LOGO = 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png'
+export const WMATIC_ABI = abis.wmaticABI
 
-export const FTM_ADDRESS = 'MATIC'
-export const FTM_NAME = 'MATIC'
-export const FTM_SYMBOL = 'MATIC'
-export const FTM_DECIMALS = 18
-export const FTM_LOGO = 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png'
+export const MATIC_ADDRESS = 'MATIC'
+export const MATIC_NAME = 'MATIC'
+export const MATIC_SYMBOL = 'MATIC'
+export const MATIC_DECIMALS = 18
+export const MATIC_LOGO = 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png'
 
 export const FACTORY_ADDRESS = '0xD0692d6C30cd7a383f227Ba1cB28EeCE2F050926'
 export const FACTORY_ABI = abis.factoryABI

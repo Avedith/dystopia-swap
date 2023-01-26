@@ -9,7 +9,7 @@ import { bribeABI } from './bribeABI'
 import { tokenABI } from './tokenABI'
 import { veDistABI } from './veDistABI'
 import { minterABI } from './minterABI'
-import { wftmABI } from './wftmABI'
+import { wmaticABI } from './wmaticABI'
 import { dystopiaLibraryABI } from './dystopiaLib'
 import { multiSwapABI } from './MultiSwap2'
 
@@ -25,7 +25,7 @@ export default {
   veDistABI,
   tokenABI,
   minterABI,
-  wftmABI,
+  wmaticABI,
   dystopiaLibraryABI,
   multiSwapABI,
 }

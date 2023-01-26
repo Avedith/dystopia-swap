@@ -1,4 +1,4 @@
-export const wftmABI = [
+export const wmaticABI = [
   {
     inputs: [],
     payable: false,

@@ -4,7 +4,7 @@ import {createClient} from "urql";
 import {BLACK_LIST_TOKENS, CONTRACTS, QUERIES, ZERO_ADDRESS} from "../constants";
 import {getEthPrice, getOrCreateBaseAsset, isNetworkToken} from "./token-helper";
 import {multicallRequest} from "./multicall-helper";
-import {WFTM_ADDRESS} from "../constants/contracts";
+import {WMATIC_ADDRESS} from "../constants/contracts";
 
 const client = createClient({url: process.env.NEXT_PUBLIC_API});
 
@@ -271,10 +271,10 @@ export const loadPair = async (
     return null;
   }
   if (isNetworkToken(addressA)) {
-    addressA = WFTM_ADDRESS;
+    addressA = WMATIC_ADDRESS;
   }
   if (isNetworkToken(addressB)) {
-    addressB = WFTM_ADDRESS;
+    addressB = WMATIC_ADDRESS;
   }
 
 // if pair exist just update fields and return
