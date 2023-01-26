@@ -6,7 +6,6 @@ import BigNumber from 'bignumber.js';
 import classes from './ssBribeCard.module.css'
 import stores from '../../stores/index.js'
 import { formatCurrency, formatSymbol } from '../../utils'
-import { formatSymbol } from '../../utils';
 import { ACTIONS } from '../../stores/constants';
 
 const theme = createTheme({
